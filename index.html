@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturne Candles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Todavia me queda hacer todas las paginas correspondientes a cada producto.
+Me queda maquetar bien como serian las paginas para "account" y "cart", hacer las imagenes para los modelos y accesorios y acomodar sus propiedades en el .css
+Nombre las paginas en ingles porque lo manejo bien pero despues me di cuenta que quizas no es una buena practica tenerlo en ingles para un sitio que se aplicaria a nuestro mercado.
+Los links a las tiendas los deje en blanco por el momento.-->
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-div">
+            <h1>
+                <a href="#" title="Ir al inicio">Nocturne Candles</a>
+            </h1>
+        </div>
+        <hr>
+        <nav>
+            <div>
+                <ul> 
+                    <li><a href="./pages/collections.html">colecciones</a></li>
+                    <li><a href="./pages/models.html">modelos</a></li>
+                    <li><a href="./pages/fragances.html">fragancias</a></li>
+                    <li><a href="./pages/accesories.html">accesorios</a></li>
+                    <li><a href="./pages/aboutus.html">nosotros</a></li>
+                </ul>
+            </div>
+            <div>
+                <form class="search-form" action="">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit" aria-label="Buscar">
+                        <svg class="icon-search" viewBox="0 0 22 22">
+                            <circle cx="10" cy="10" r="7"/>
+                            <line x1="16" y1="16" x2="21" y2="21"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="./pages/account.html">cuenta</a></li>
+                    <li><a href="./pages/cart.html">carrito</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    
+
+    <!-- Main Content -->
+    <main>
+
+        <div>
+            <img class="main-img" src="ext/main.png" alt="main image">
+        </div>
+
+        <hr>
+
+        <section>
+            <a class="collections" href="./pages/collections.html">
+                <h2>Colleciones destacadas</h2>
+            </a>
+        </section>
+
+        <hr>
+
+        <section class="bundles">
+            <a class="bundle" href="./pages/legato.html">
+                <h3>legato</h3>
+                <img src="ext/legato.jpg" alt="Bundle Legato">
+            </a>
+            <a class="bundle" href="./pages/sonata.html">
+                <h3>sonata</h3>
+                <img src="ext/sonata.png" alt="Bundle Sonata">
+            </a>
+            <a class="bundle" href="./pages/suite.html">
+                <h3>suite</h3>
+                <img src="ext/suite.jpg" alt="Bundle Suite">
+            </a>
+        </section>
+
+    </main>
+
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>tiendas</h3>
+                <ul>
+                    <li><a href="#">Olivos</a></li>
+                    <li><a href="#">San Isidro</a></li>
+                    <li><a href="#">Belgrano</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>productos</h3>
+                <ul>
+                    <li><a href="./pages/models.html">Modelos</a></li>
+                    <li><a href="./pages/fragances.html">Fragancias</a></li>
+                    <li><a href="./pages/accesories.html">Accesorios</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>contacto</h3>
+                <ul>
+                    <li><a href="https://www.whatsapp.com/join?lang=es_LA&dept=online%2F" target="_blank">WhatsApp</a></li>
+                    <li><a href="#">Mail</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nocturne Candles Todos los derechos reservados</p>
+        </div>
+
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-div">
+            <h1>
+                <a href="#">Nocturne Candles</a>
+            </h1>
+        </div>
+        <hr>
+        <nav>
+            <div>
+                <ul> 
+                    <li><a href="collections.html">colecciones</a></li>
+                    <li><a href="models.html">modelos</a></li>
+                    <li><a href="fragances.html">fragancias</a></li>
+                    <li><a href="accesories.html">accesorios</a></li>
+                    <li><a href="aboutus.html">nosotros</a></li>
+                </ul>
+            </div>
+            <div>
+                <form class="search-form" action="">
+                    <input type="text" placeholder="Buscar">
+                    <button type="submit" aria-label="Buscar">
+                        <svg class="icon-search" viewBox="0 0 22 22">
+                            <circle cx="10" cy="10" r="7"/>
+                            <line x1="16" y1="16" x2="21" y2="21"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="account.html">cuenta</a></li>
+                    <li><a href="#">carrito</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+        
+    <!-- Main -->
+    <main>
+        <section class="headings">
+            <h2>CHECKOUT</h2>
+        </section>
+        <hr>
+        <section>
+            <div>
+                <p>Revisa los productos en el carrito antes de confirmar la compra</p>
+                    <form action="login" method="post">
+                        <label for="adress">direccion:</label>
+                        <input type="text" id="adress" name="adress" required>
+                
+                        <label for="payment-method">metodo de pago:</label>
+                        <select id="payment-method" name="payment-method">
+                            <option value="credit-card">tarjeta de crédito</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank-transfer">transferencia</option>
+                            <option value="cash">efectivo</option>
+                        </select>
+                    </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <ul>
+                    <li>Modelo A - $20000.00</li>
+                    <li>Modelo B - $25000.00</li>
+                    <li>Modelo C - $30000.00</li>
+                </ul>
+            </div>
+            <div>
+                <p>Subtotal: $75000.00</p>
+                <p>Shipping: $2000.00</p>
+                <p>Taxes: $1200.00</p>
+                <p>Grand total: $78200.00</p>
+                <button type="button">continuar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>tiendas</h3>
+                <ul>
+                    <li><a href="#">Olivos</a></li>
+                    <li><a href="#">San Isidro</a></li>
+                    <li><a href="#">Belgrano</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>productos</h3>
+                <ul>
+                    <li><a href="models.html">Modelos</a></li>
+                    <li><a href="fragances.html">Fragancias</a></li>
+                    <li><a href="accesories.html">Accesorios</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-column">
+                <h3>contacto</h3>
+                <ul>
+                    <li><a href="https://www.whatsapp.com/join?lang=es_LA&dept=online%2F" target="_blank">WhatsApp</a></li>
+                    <li><a href="#">Mail</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="footer-bottom">&copy; 2025 Nocturne Candles Todos los derechos reservados</p>
+
+        
+    </footer>
+</body>
+</html>
