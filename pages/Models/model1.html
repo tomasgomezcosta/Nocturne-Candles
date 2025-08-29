@@ -9,11 +9,11 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-div">
+        <section class="header-section">
             <h1>
                 <a href="../../index.html" title="Ir al inicio">Nocturne Candles</a>
             </h1>
-        </div>
+        </section>
         <hr>
         <nav>
             <div>
@@ -29,8 +29,14 @@
                 </ul>
             </div>
             <div>
-                <form action="">
-                    <input type="text" placeholder="Buscar">
+                <form class="search-form" action="">
+                    <button type="button" class="search-toggle" aria-label="Buscar">
+                        <svg class="icon-search" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8"/>
+                            <line x1="18" y1="18" x2="22" y2="22"/>
+                        </svg>
+                    </button>
+                    <input type="text" class="search-input" placeholder="Buscar" />
                 </form>
             </div>
             <div>
@@ -66,15 +72,17 @@
             <h2>Model 1</h2>
         </section>
         <hr>
-        <div class="models-detail">
-            <img src="../../ext/model1.png" alt="Model 1" style="max-width:350px;width:100%;border-radius:8px;">
-            <div class="model-info">
-                <h3>Velón</h3>
-                <p>
-                    Un elegante velón de 300g con fragancia a elección. Ideal para crear un ambiente acogedor.
-                </p>
+        <section class="model">
+            <div class="models-detail">
+                <img src="../../ext/model1.png" alt="Model 1" style="max-width:350px;width:100%;border-radius:8px;">
+                <div class="model-info">
+                    <h3>Velón</h3>
+                    <p>
+                        Un elegante velón de 300g con fragancia a elección. Ideal para crear un ambiente acogedor.
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -113,6 +121,23 @@
     <script>
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        const searchForm = document.querySelector('.search-form');
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchInput = document.querySelector('.search-input');
+
+        searchToggle.addEventListener('click', () => {
+            searchForm.classList.toggle('active');
+            if (searchForm.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchForm.contains(e.target)) {
+                searchForm.classList.remove('active');
+            }
         });
     </script>
 </body>

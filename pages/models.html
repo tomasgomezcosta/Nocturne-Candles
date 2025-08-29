@@ -11,11 +11,11 @@
 
     <!-- Header -->
     <header>
-        <div class="header-div">
+        <section class="header-section">
             <h1>
                 <a href="../index.html" title="Ir al inicio">Nocturne Candles</a>
             </h1>
-        </div>
+        </section>
         <hr>
         <nav>
             <div>
@@ -32,13 +32,13 @@
             </div>
             <div>
                 <form class="search-form" action="">
-                    <input type="text" placeholder="Buscar">
-                    <button type="submit" aria-label="Buscar">
-                        <svg class="icon-search" viewBox="0 0 22 22">
-                            <circle cx="10" cy="10" r="7"/>
-                            <line x1="16" y1="16" x2="21" y2="21"/>
+                    <button type="button" class="search-toggle" aria-label="Buscar">
+                        <svg class="icon-search" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8"/>
+                            <line x1="18" y1="18" x2="22" y2="22"/>
                         </svg>
                     </button>
+                    <input type="text" class="search-input" placeholder="Buscar" />
                 </form>
             </div>
             <div>
@@ -75,7 +75,7 @@
             <h2>modelos</h2>
         </section>
         <hr>
-        <div class="models-group">
+        <section class="models-section">
             <div class="models">
                 <a href="../pages/Models/model1.html">
                     <img src="../../ext/model1.png" alt="Model 1">
@@ -117,11 +117,11 @@
                 </a>
             </div>
             <div class="models">
-                <a href="../../models/model9.html">
+                <a href="../pages/Models/model9.html">
                     <img src="../../ext/model9.png" alt="Model 9">
                 </a>
             </div>
-        </div>
+        </section>
         
         
     </main>
@@ -165,6 +165,23 @@
     <script>
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        const searchForm = document.querySelector('.search-form');
+        const searchToggle = document.querySelector('.search-toggle');
+        const searchInput = document.querySelector('.search-input');
+
+        searchToggle.addEventListener('click', () => {
+            searchForm.classList.toggle('active');
+            if (searchForm.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchForm.contains(e.target)) {
+                searchForm.classList.remove('active');
+            }
         });
     </script>
 </body>
