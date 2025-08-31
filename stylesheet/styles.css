@@ -1,9 +1,11 @@
-/* Reset y tipografía base */
+/* ========================================================= */
+/* ================ RESET Y TIPOGRAFÍA BASE ================ */
+/* ========================================================= */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Tenor Sans", sans-serif;
     box-sizing: border-box;
+    font-family: "Tenor Sans", sans-serif;
 }
 
 body {
@@ -16,7 +18,9 @@ hr {
     background-color: #75787E;
 }
 
-/* Header y Navbar */
+/* ========================================================= */
+/* ==================== HEADER Y NAVBAR ==================== */
+/* ========================================================= */
 .header-section {
     background-color: #222831;
     padding: 1.875rem;
@@ -35,15 +39,17 @@ hr {
     font-weight: 500;
 }
 
-/* NAVBAR BASE */
+/* ========================================================= */
+/* ======================= NAVBAR BASE ===================== */
+/* ========================================================= */
 nav {
-    background: #9f9587;
-    padding: 1rem 1rem;
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #9f9587;
+    padding: 1rem 1rem;
 }
 
 .nav-toggle {
@@ -53,13 +59,12 @@ nav {
     font-size: 2.5rem;
     color: #d9d9d9;
     cursor: pointer;
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
     z-index: 1000;
 }
 
-/* Menú principal */
+/* ========================================================= */
+/* ===================== MENÚ PRINCIPAL ==================== */
+/* ========================================================= */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -67,6 +72,8 @@ nav {
 }
 
 .nav-menu a {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: #222831;
     font-family: "Tenor Sans", sans-serif;
@@ -74,9 +81,8 @@ nav {
     text-transform: uppercase;
     background-color: #d9d9d9;
     border-radius: .55rem;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     padding: .7rem 1rem;
-
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .nav-menu a:hover {
@@ -86,21 +92,23 @@ nav {
     box-shadow: 1px 2px 8px #222831;
 }
 
-/* Search Form */
+/* ========================================================= */
+/* ===================== SEARCH FORM ======================= */
+/* ========================================================= */
 .search-form {
     display: flex;
 }
 
 .search-toggle {
+    display: flex;
+    justify-content: center;
     background-color: #d9d9d9;
     color: #393e46da;
     border: none;
     border-radius: .55rem;
     padding: .5rem 1rem;
-    display: flex;
-    justify-content: center;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .search-toggle:hover {
@@ -119,6 +127,7 @@ nav {
 
 .search-input {
     width: 0;
+    margin-left: 0;
     border: none;
     border-radius: 0.55rem;
     background: #e5e5e5;
@@ -129,7 +138,6 @@ nav {
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     outline: none;
     text-transform: uppercase;
-    margin-left: 0;
 }
 
 .search-form.active .search-input {
@@ -141,7 +149,9 @@ nav {
     display: none;
 }
 
-/* Cuenta y carrito */
+/* ========================================================= */
+/* ================== CUENTA Y CARRITO ===================== */
+/* ========================================================= */
 .nav-account {
     display: flex;
     gap: .625rem;
@@ -150,6 +160,8 @@ nav {
 
 .nav-account li a {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #d9d9d9;
     color: #222831;
     border-radius: .55rem;
@@ -168,7 +180,9 @@ nav {
     height: 2rem;
 }
 
-/* Main Section */
+/* ========================================================= */
+/* ===================== MAIN SECTION ====================== */
+/* ========================================================= */
 .main-img {
     display: block;
     max-width: 100%;
@@ -194,7 +208,9 @@ section {
     padding: 1.2rem;
 }
 
-/* Bundles */
+/* ========================================================= */
+/* ======================== BUNDLES ======================== */
+/* ========================================================= */
 .bundles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -232,7 +248,9 @@ section {
     margin: 1.25rem auto;
 }
 
-/* Footer */
+/* ========================================================= */
+/* ======================== FOOTER ========================= */
+/* ========================================================= */
 footer {
     color: #d9d9d9;
     text-align: center;
@@ -287,7 +305,9 @@ footer {
     letter-spacing: .125rem;
 }
 
-/* About Us */
+/* ========================================================= */
+/* ======================= ABOUT US ======================== */
+/* ========================================================= */
 .about-section {
     background-color: #222831;
     justify-items: center;
@@ -306,8 +326,9 @@ footer {
     line-height: 1.5;
 }
 
-/* Account */
-
+/* ========================================================= */
+/* ======================== ACCOUNT ======================== */
+/* ========================================================= */
 .account-section {
     background-color: #222831;
     padding: 2.5rem;
@@ -315,9 +336,9 @@ footer {
 }
 
 .account-input {
+    width: 100%;
     padding: 3.125rem;
     background-color: #393E46;
-    width: 100%;
     border-radius: .55rem;
 }
 
@@ -328,7 +349,9 @@ footer {
     letter-spacing: .125rem;
 }
 
-/* Models */
+/* ========================================================= */
+/* ======================== MODELS ========================= */
+/* ========================================================= */
 .models-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -352,8 +375,9 @@ footer {
     border-radius: .55rem;
 }
 
-/* Model detail page layout */
-
+/* ========================================================= */
+/* ============== MODEL DETAIL PAGE LAYOUT ================= */
+/* ========================================================= */
 .model {
     background: #222831;
     padding: 2.5rem;
@@ -367,6 +391,7 @@ footer {
     padding: 2.5rem;
     color: #d9d9d9;
 }
+
 .model-info {
     color: #d9d9d9;
     text-align: left;
@@ -374,7 +399,9 @@ footer {
     line-height: 3rem;
 }
 
-/* Fragances */
+/* ========================================================= */
+/* ======================= FRAGANCES ======================= */
+/* ========================================================= */
 .fragances-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -398,9 +425,11 @@ footer {
     border-radius: .55rem;
 }
 
-/* ------------------- MEDIA QUERIES ------------------- */
+/* ========================================================= */
+/* ===================== MEDIA QUERIES ===================== */
+/* ========================================================= */
 
-/* 1024px - Laptop/Tablet Landscape */
+/*============ 1024px - Laptop/Tablet Landscape ============ */
 @media (max-width: 1024px) {
     .header-section h1 a {
         font-size: 3rem;
@@ -432,8 +461,8 @@ footer {
         display: flex;
     }
     .nav-menu a {
-        justify-content: center;
         display: flex;
+        justify-content: center;
         padding: 0.7rem 1.2rem;
     }
     .footer-column {
@@ -442,7 +471,7 @@ footer {
     }
 }
 
-/* 768px - Tablet */
+/*============ 768px - Tablet ============ */
 @media (max-width: 768px) {
     .header-section h1 a {
         font-size: 2rem;
@@ -487,7 +516,7 @@ footer {
         padding: 0.179rem;
         max-width: 15rem;
         justify-content: center;
-        border-radius: 0.3rem
+        border-radius: 0.3rem;
     }
     .search-form {
         gap: 0.7rem;
@@ -505,7 +534,6 @@ footer {
     }
     .footer-column {
         padding: .8375rem 1rem;
-
     }
     .footer-column h3 {
         font-size: 0.55rem;
@@ -535,7 +563,7 @@ footer {
     }
 }
 
-/* 425px - Mobile L */
+/*============ 425px - Mobile L ============ */
 @media (max-width: 425px) {
     .header-section {
         padding: 1rem;
@@ -606,7 +634,7 @@ footer {
     }
 }
 
-/* 320px - Mobile XS */
+/*============ 320px - Mobile XS ============ */
 @media (max-width: 320px) {
     .header-section {
         padding: 1rem;
@@ -619,7 +647,7 @@ footer {
         font-size: 0.70rem;
         padding: 0rem;
         justify-content: center;
-        border-radius: 0.3rem
+        border-radius: 0.3rem;
     }
     .nav-menu.active {
         position: absolute;
