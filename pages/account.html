@@ -128,26 +128,47 @@
     </footer>
 
     <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-        const searchForm = document.querySelector('.search-form');
-        const searchToggle = document.querySelector('.search-toggle');
-        const searchInput = document.querySelector('.search-input');
+    // Abrir/cerrar con el botón
+    navToggle.addEventListener('click', function(e) {
+        navMenu.classList.toggle('active');
+        e.stopPropagation();
+    });
 
-        searchToggle.addEventListener('click', () => {
-            searchForm.classList.toggle('active');
-            if (searchForm.classList.contains('active')) {
-                searchInput.focus();
+    // Cerrar al salir con el mouse
+    navMenu.addEventListener('mouseleave', function() {
+        navMenu.classList.remove('active');
+    });
+
+    // Cerrar al hacer click fuera del menú
+    document.addEventListener('click', function(e) {
+        if (navMenu.classList.contains('active')) {
+            // Si el click NO es dentro del menú ni en el botón
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
             }
-        });
+        }
+    });
 
-        document.addEventListener('click', (e) => {
-            if (!searchForm.contains(e.target)) {
-                searchForm.classList.remove('active');
-            }
-        });
+    const searchForm = document.querySelector('.search-form');
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchInput = document.querySelector('.search-input');
+
+    searchToggle.addEventListener('click', () => {
+        searchForm.classList.toggle('active');
+        if (searchForm.classList.contains('active')) {
+            searchInput.focus();
+        }
+    });
+
+    // Opcional: cerrar el campo si se hace click fuera
+    document.addEventListener('click', (e) => {
+        if (!searchForm.contains(e.target)) {
+            searchForm.classList.remove('active');
+        }
+    });
     </script>
 </body>
 </html>

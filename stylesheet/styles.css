@@ -27,8 +27,8 @@ hr {
 }
 
 .header-section h1 {
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .header-section h1 a {
@@ -74,6 +74,7 @@ nav {
 .nav-menu a {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #222831;
     font-family: "Tenor Sans", sans-serif;
@@ -102,6 +103,7 @@ nav {
 .search-toggle {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #d9d9d9;
     color: #393e46da;
     border: none;
@@ -138,6 +140,7 @@ nav {
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     outline: none;
     text-transform: uppercase;
+    transition: width 0.3s, padding 0.3s;
 }
 
 .search-form.active .search-input {
@@ -311,13 +314,12 @@ footer {
 .about-section {
     background-color: #222831;
     justify-items: center;
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem 0;
 }
 
 .about-text {
     background-color: #393E46;
     padding: 3.125rem;
-    margin-top: 1rem;
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: .125rem;
@@ -349,6 +351,18 @@ footer {
     letter-spacing: .125rem;
 }
 
+.account-input button {
+    background-color: #d9d9d9;
+    color: #222831;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
 /* ========================================================= */
 /* ======================== MODELS ========================= */
 /* ========================================================= */
@@ -366,7 +380,16 @@ footer {
 .models {
     background-color: #393E46; 
     border-radius: .55rem;
-    padding: 2rem;
+    padding: 1.4rem;
+}
+
+.models h3 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #d9d9d9;
+    padding-bottom: 0.5rem;
 }
 
 .models img {
@@ -400,6 +423,45 @@ footer {
 }
 
 /* ========================================================= */
+/* ======================= ACCESSORIES ===================== */
+/* ========================================================= */
+.accessories-section {
+    background-color: #222831;
+    padding: 2.5rem;
+    justify-items: center;
+}
+
+.accessories-list  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #393E46;
+    padding: 2.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    border-radius: .55rem;
+    color: #d9d9d9;
+    line-height: 1.5;
+}
+
+.accessories-list li {
+    list-style: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid #c0b2a3;
+}
+
+.accessories-list li:last-child {
+    border-bottom: none;
+}
+
+.accessories-list a {
+    color: #d9d9d9; 
+    text-decoration: none; 
+}
+
+/* ========================================================= */
 /* ======================= FRAGANCES ======================= */
 /* ========================================================= */
 .fragances-section {
@@ -423,6 +485,92 @@ footer {
     width: 100%;
     height: auto;
     border-radius: .55rem;
+}
+
+/* ========================================================= */
+/* ========================== CART ========================= */
+/* ========================================================= */
+.cart-input {
+    display: flex;
+    justify-content: center;
+    background-color: #222831;
+    padding: 2rem 2rem 0;
+}
+
+.cart-input div {
+    background-color: #393E46;
+    color: #d9d9d9;
+    text-transform: uppercase;
+    height: auto;
+    width: 100%;
+    padding: 4rem;
+    border-radius: .55rem;
+}
+
+.cart-input p {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.cart-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    background-color: #222831;
+    padding: 2rem 2rem 0;
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    background-color: #393E46;
+    color: #d9d9d9;
+    padding: 2rem;
+    border-radius: .55rem;
+}
+
+.items-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.items-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #c0b2a3;
+}
+
+.items-list li:last-child {
+    border-bottom: none;
+}
+
+.cart-summary {
+    background-color: #393E46;
+    color: #d9d9d9;
+    padding: 2rem;
+    border-radius: .55rem;
+}
+
+.cart-summary ul {
+    list-style: none;
+    padding-bottom: 1rem;
+}
+
+.cart-summary li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #c0b2a3;
+}
+
+.cart-summary button {
+    background-color: #d9d9d9;
+    color: #222831;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* ========================================================= */
@@ -479,7 +627,6 @@ footer {
         padding-bottom: 0.35em;
         padding-top: 0.35em;
     }
-
     .collections h2 {
         font-size: 1.3rem;
     }
@@ -495,7 +642,6 @@ footer {
     .bundle a {
         letter-spacing: 1rem;
     }
-
     .bundle img {
         width: 100%;
         height: auto;
@@ -522,11 +668,6 @@ footer {
         gap: 0.7rem;
         width: 90%;
     }
-    .fragances {
-        grid-template-columns: 1fr;
-        row-gap: 1.5rem;
-        padding: 1.5rem;
-    }
     .footer-container {
         gap: 1.3rem;
         padding: 1.3rem;
@@ -540,12 +681,15 @@ footer {
         letter-spacing: 0.08rem;
     }
     .footer-column a {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         letter-spacing: 0.05rem;
         line-height: 1rem;
     }
     .footer-bottom {
         font-size: 0.5rem;
+    }
+    .headings h2 {
+        font-size: 1.5rem;
     }
     .models-group {
         grid-template-columns: 1fr;
@@ -561,7 +705,79 @@ footer {
     .model-info {
         text-align: center;
     }
+    .models {
+        width: 100%;
+        padding: 1rem;
+    }
+    .models h3 {
+        font-size: 0.7rem;
+        letter-spacing: 0.08rem;
+    }
+    .models-section {
+        gap: 1.3rem;
+        padding: 1.3rem;
+    }
+    .fragances-section {
+        gap: 1.3rem;
+        padding: 1.3rem;
+    }
+    .fragances {
+        padding: 1rem;
+    }
+    .about-section {
+        padding: 1.3rem 1.3rem 0;
+    }
+    .about-text {
+        padding: 1.3rem;
+        font-size: 1rem;
+        letter-spacing: 0rem;
+        text-align: justify;
+    }
+    .account-section {
+        padding: 1.3rem;
+    }
+    .account-input label {
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+    }
+    .cart-input {
+        padding: 1.3rem 1.3rem 0;
+    }
+    .cart-input div {
+        padding: 2rem;
+    }
+    .cart-input p {
+        font-size: 0.8rem;
+        letter-spacing: 0.03rem;
+        margin-bottom: 1.5rem;
+    }
+    .cart-input label {
+        font-size: 0.8rem;
+        letter-spacing: 0.03rem;
+    }
+    .cart-details {
+        padding: 1.3rem 1.3rem 0;
+        gap: 1.3rem;
+    }
+    .items-list {
+        justify-content: center;
+    }
+    .items-list li {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+    .cart-summary {
+        padding: 1.3rem 1.3rem;
+    }
+    .accessories-section {
+        padding: 1.3rem 1.3rem 0;
+    }
+    .accessories-list {
+        padding: 1.3rem 1.3rem;
+        font-size: 1rem;
+    }
 }
+
 
 /*============ 425px - Mobile L ============ */
 @media (max-width: 425px) {
@@ -592,7 +808,6 @@ footer {
         width: 1.5rem;
         height: 1.5rem;
     }
-
     .collections h2 {
         font-size: 1rem;
         letter-spacing: 0.1rem;
@@ -627,10 +842,63 @@ footer {
         letter-spacing: 0.13rem;
         line-height: 1rem;
     }
+    .headings h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+    .models-section {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
     .models-group {
         grid-template-columns: 1fr;
         row-gap: 1.2rem;
         padding: 1.2rem;
+    }
+    .models h3 {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+    .cart-details {
+        grid-template-columns: 1fr;
+        row-gap: 1.2rem;
+        padding: 1.2rem;
+    }
+    .fragances-section {
+        grid-template-columns: 1fr;
+        row-gap: 1.2rem;
+        padding: 1.2rem;
+    }
+    .accessories-section {
+        padding: 1.2rem;
+    }
+    .about-section {
+        padding: 1.2rem;
+    }
+    .about-text {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .model {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .models-detail {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+    }
+    .model-info h3 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: 1px solid #c0b2a3;
+    }
+    .model-info p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
@@ -661,6 +929,11 @@ footer {
         gap: 1rem;
         padding: 1rem;
     }
+    .headings h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        padding: 0.9rem;
+    }
     .fragances {
         grid-template-columns: 1fr;
         row-gap: 1rem;
@@ -678,17 +951,10 @@ footer {
     }
     .about-text {
         padding: 1rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .account-input {
         padding: 1rem;
         font-size: 1rem;
-    }
-    .models-detail {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-        max-width: 98vw;
     }
 }
