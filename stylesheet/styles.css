@@ -241,9 +241,10 @@ footer {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    column-gap: 2.5rem;
     padding: 2.5rem;
     margin-bottom: 1.25rem;
+    background-color: #222831;
 }
 
 .footer-bottom {
@@ -415,7 +416,7 @@ footer {
         position: absolute;
         top: 1rem;
         left: 1rem;
-        min-width: 20rem;
+        max-width: 20rem;
         height: 18rem;
         background: #9f9587;
         flex-direction: column;
@@ -438,7 +439,6 @@ footer {
     .footer-column {
         padding: .9375rem 1.875rem;
         font-size: 0.8rem;
-        min-width: 11rem;
     }
 }
 
@@ -451,17 +451,24 @@ footer {
         padding-top: 0.35em;
     }
 
-.collections h2 {
+    .collections h2 {
         font-size: 1.3rem;
     }
-
     .bundles {
-        gap: 1.5rem;
-        padding: 1.5rem;
+        gap: 1.3rem;
+        padding: 1.3rem;
     }
     .bundle h3 {
-        font-size: 1rem;
-        letter-spacing: 0.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        height: auto;
+    }
+    .bundle a {
+        letter-spacing: 1rem;
+    }
+
+    .bundle img {
+        width: 100%;
         height: auto;
     }
     nav ul li {
@@ -478,7 +485,7 @@ footer {
     .nav-menu a {
         font-size: 0.9rem;
         padding: 0.179rem;
-        min-width: 10rem;
+        max-width: 15rem;
         justify-content: center;
         border-radius: 0.3rem
     }
@@ -492,16 +499,25 @@ footer {
         padding: 1.5rem;
     }
     .footer-container {
-        gap: 1.5rem;
-        padding: 1.5rem;
+        gap: 1.3rem;
+        padding: 1.3rem;
+        margin-bottom: 0;
     }
     .footer-column {
-        padding: .8375rem 1.575rem;
-        font-size: 0.4rem;
-        min-width: 9rem;
+        padding: .8375rem 1rem;
+
+    }
+    .footer-column h3 {
+        font-size: 0.55rem;
+        letter-spacing: 0.08rem;
+    }
+    .footer-column a {
+        font-size: 0.5rem;
+        letter-spacing: 0.05rem;
+        line-height: 1rem;
     }
     .footer-bottom {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
     .models-group {
         grid-template-columns: 1fr;
@@ -521,30 +537,67 @@ footer {
 
 /* 425px - Mobile L */
 @media (max-width: 425px) {
+    .header-section {
+        padding: 1rem;
+    }
     .header-section h1 a {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+    nav {
+        padding: 0.5rem;
+    }
+    .nav-toggle {
+        font-size: 1.7rem;
+    }
+    .search-toggle {
+        padding: 0.4rem;
+    }
+    .icon-search {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .nav-account li a {
+        padding: 0.15rem 0.4rem;
+    }
+    .nav-account svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .collections h2 {
         font-size: 1rem;
-        letter-spacing: 0.12rem;
-    }
-    .main-img {
-        max-width: 98vw;
-        width: 100%;
-    }
-    .bundle,
-    .footer-column,
-    .models {
-        max-width: 98vw;
-        padding: 0.8rem;
+        letter-spacing: 0.1rem;
+        padding: 1rem;
     }
     .bundles {
-        gap: 1.2rem;
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
         padding: 1.2rem;
-        flex-direction: column;
-        align-items: center;
+    }
+    .bundle h3 {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
     }
     .footer-container {
         grid-template-columns: 1fr;
         row-gap: 1.2rem;
-        padding: 1.2rem;
+        padding: 0rem 1.2rem 1.2rem;
+    }
+    .footer-column h3 {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+    .footer-column a {
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.3rem;
+    }
+    .footer-bottom {
+        font-size: 0.6rem;
+        letter-spacing: 0.13rem;
+        line-height: 1rem;
     }
     .models-group {
         grid-template-columns: 1fr;
@@ -560,52 +613,25 @@ footer {
     }
     .header-section h1 a {
         font-size: 1.2rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.2rem;
     }
-    .main-img {
-        width: 100%;
-        height: auto;
+    .nav-menu a {
+        font-size: 0.70rem;
+        padding: 0rem;
+        justify-content: center;
+        border-radius: 0.3rem
     }
-    .bundle,
-    .footer-column,
-    .models {
-        padding: 0.7rem;
+    .nav-menu.active {
+        position: absolute;
+        align-items: center;
+        padding: 0.2rem;
+        width: 11rem;
+        gap: 0.6rem;
+        height: 10rem;
     }
     .bundles {
         gap: 1rem;
         padding: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav {
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
-    nav ul {
-        gap: 0.3rem;
-    }
-    nav ul li {
-        width: 100vw;
-    }
-    nav a {
-        font-size: 1.1rem;
-        padding: 1rem 0;
-    }
-    .search-form {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        align-items: center;
-    }
-    .search-form.active .search-toggle {
-        display: none;
-    }
-    .search-form input[type="text"],
-    .search-form button,
-    .search-form input[type="submit"] {
-        max-width: 96vw;
-        font-size: 1rem;
-        padding: 0.7rem 0.5rem;
     }
     .fragances {
         grid-template-columns: 1fr;
